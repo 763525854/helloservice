@@ -6,8 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Insert title here</title>
-<script type="text/JavaScript"
-	src="static/js/jquery/jquery-3.3.1.min.js" /></script>
+<script src="static/js/jquery/jquery-3.3.1.min.js" /></script>
 <script type="text/javascript">
 	function exportData() {
 		var arr = new Array();
@@ -15,20 +14,25 @@
 				+ $("#password").val();
 		//这里不能用ajax请求，ajax请求无法弹出下载保存对话框
 	}
+	function myreset() {
+		$("#username").val("");
+		$("#password").val("");
+		$("#status").val("");
+	}
 </script>
 </head>
 <body>
-<form action="">
+	<form action="">
 		姓名：<input type="text" id="username"><br> 密码：<input
 			type="text" id="password"><br> <select id="status"
 			value="${status} }">
-			<option value="">请选择</option>
-			<option value="">等待</option>
-			<option value="">启动</option>
-			<option value="">运行</option>
+			<option value="1">请选择</option>
+			<option value="2">等待</option>
+			<option value="3">启动</option>
+			<option value="4">运行</option>
 		</select>
 		<button type="reset">重置1</button>
-		<button type="button">重置2</button>
+		<button type="button" onclick="myreset()">重置2</button>
 		<button type="submit">提交</button>
 	</form>
 	返回值
