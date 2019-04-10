@@ -15,8 +15,8 @@ public class HelloService extends SpringBootServletInitializer {
 		SpringApplication.run(HelloService.class, args);
 	}
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(HelloService.class);
-	}
+//	@Override
+//	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+//		return builder.sources(HelloService.class);
+//	}
 }

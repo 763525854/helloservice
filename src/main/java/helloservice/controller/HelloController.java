@@ -28,6 +28,12 @@ public class HelloController {
 		return new ModelAndView("login");
 	}
 	
+	@RequestMapping("ok")
+	public String ok() {
+		System.out.println("i am ok ,.i am running");
+		return "ok";
+	}
+	
 
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String hello() throws InterruptedException {
